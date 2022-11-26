@@ -1,0 +1,16 @@
+
+
+<div class="navbar navbar-expand-lg d-flex align-items-center">
+    <div class="container-fluid d-flex justify-content-end p-2 mx-4" >
+        <div class="d-flex align-items-center c-pointer" (click)="menu.toggle($event)">
+            <p-avatar styleClass="img-rounded me-2" size="large"
+            image="/assets/images/avatar.jpg" >
+            </p-avatar>
+            <p  class="m-0"><span class="fw-bold">Bienvenido:</span> Juan</p>
+        </div>
+    </div>
+    
+</div>
+<div class="d-flex justify-content-end">
+    <p-menu [baseZIndex]="9000" #menu [popup]="true" [model]="items">open</p-menu>
+</div>

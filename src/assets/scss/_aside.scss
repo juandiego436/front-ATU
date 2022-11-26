@@ -1,0 +1,13 @@
+.aside {
+    overflow: auto;
+    position: fixed;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    width: 100px;
+    z-index: 98;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #181C32;
+    border-radius: 0.55rem;
+}

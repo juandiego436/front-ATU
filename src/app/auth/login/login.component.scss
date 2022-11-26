@@ -1,0 +1,29 @@
+.login {
+    height: 100vh;
+}
+
+.login-content {
+    margin: 0;
+}
+
+.login-form {
+    max-width: 80%;
+}
+
+@media (min-width: 768px) {
+    .login-form {
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 768px) {
+    .login-form {
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .login-form {
+        max-width: 38%;
+    }
+}
