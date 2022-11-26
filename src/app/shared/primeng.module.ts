@@ -9,6 +9,9 @@ import {PaginatorModule} from 'primeng/paginator';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
+import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import { ToastModule } from 'primeng/toast';
+
 
 
 const components = [
@@ -20,7 +23,9 @@ const components = [
   PaginatorModule,
   InputTextModule,
   ButtonModule,
-  DropdownModule
+  DropdownModule,
+  DynamicDialogModule,
+  ToastModule
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DialogService } from 'primeng/dynamicdialog';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
