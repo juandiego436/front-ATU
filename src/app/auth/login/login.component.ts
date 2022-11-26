@@ -23,7 +23,11 @@ export class LoginComponent {
   }
 
   public logIn() {
-    this.router.navigate(["/"])
+    this.router.navigate(["/Web-ATU"])
+  }
+
+  public register() {
+    this.router.navigate(["/register"])
   }
 
 }

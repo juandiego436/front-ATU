@@ -4,7 +4,7 @@ import { ChildRoutsModule } from './child-routs.module';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Web-ATU', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: '', component: PagesComponent,
     loadChildren: () => import('./child-routs.module').then(m => m.ChildRoutsModule)
