@@ -13,10 +13,15 @@ import { UserRegisterComponent } from '@modals/user-register/user-register.compo
 export class UsersComponent {
   value: Date;
   private ref: DynamicDialogRef;
+  customers: any;
+
+  first = 0;
+
+  rows = 10;
 
   constructor(
-    public dialogService: DialogService, 
-    public messageService: MessageService
+    public dialogService: DialogService,
+    public messageService: MessageService,
   ) {}
 
   public showUseRegister() {
@@ -38,4 +43,5 @@ export class UsersComponent {
       this.ref.close();
     }
   }
+
 }

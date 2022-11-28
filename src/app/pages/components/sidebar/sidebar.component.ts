@@ -23,14 +23,14 @@ export class SidebarComponent implements OnInit {
 
     this.menu = [
       {
-        label: "Usuarios",
+        label: "Pasajeros",
         icon: 'bi bi-people-fill',
         rout: appRout.user.route
       },
       {
         label: "Movimientos",
         icon: 'bi bi-arrow-repeat',
-        rout: appRout.movimientos.route, 
+        rout: appRout.movimientos.route,
       },
       {
         label: "Reportes",
@@ -59,6 +59,49 @@ export class SidebarComponent implements OnInit {
       },
       {
         label: "Operador APP",
+        icon: 'bi bi-phone',
+        rout: appRout.operador.route
+      },
+      //EMPRESA TRANSPORTE
+      {
+        label: "Control de Tarifario",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      {
+        label: "Generador Qr's",
+        icon: 'bi bi-qr-code-scan',
+        rout: appRout.operador.route
+      },
+      {
+        label: "Reportes",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      {
+        label: "Quejas y Reclamos",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      //CENTRO RECARGAS
+      {
+        label: "Reporte General",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      {
+        label: "Reporte Fideicomiso",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      //OPERADOR DE RECARGAS
+      {
+        label: "Reporte Detallado",
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
+      },
+      {
+        label: "Reporte de Pagos",
         icon: 'bi bi-file-break-fill',
         rout: appRout.operador.route
       }
