@@ -25,6 +25,7 @@
     ],
     "paths": {
       "@helpers/*": ["src/app/helpers/*"],
+      "@modals/*": ["src/app/pages/modals/*"]
     }
   },
   "angularCompilerOptions": {

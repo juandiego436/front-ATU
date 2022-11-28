@@ -23,7 +23,6 @@ import { AuthModule } from './auth/auth.module';
     PagesModule,
     PrimengModule,
     AuthModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

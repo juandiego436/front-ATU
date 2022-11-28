@@ -11,10 +11,10 @@ import { PrimengModule } from './primeng.module';
   imports: [
     SharedComponentsModule,
     CommonModule,
-    // PrimengModule
+    PrimengModule
   ],
   exports: [
-    // PrimengModule
+    PrimengModule
   ]
 })
 export class SharedModule { }

@@ -4,10 +4,11 @@ import { HomeComponent } from './home/home.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
 
 import { appRout } from '../helpers/constans/index';
+import { UsersComponent } from './users/users.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
-  { path: appRout.user.path, component: MovimientosComponent, data: { title: 'Usuarios' } },
+  { path: appRout.user.path, component: UsersComponent, data: { title: 'Usuarios' } },
   { path: appRout.movimientos.path, component: MovimientosComponent, data: { title: 'Movimientos' } },
   { path: appRout.reportes.path, component: HomeComponent, data: { title: 'Reportes' } },
   { path: appRout.transporte.path, component: HomeComponent, data: { title: 'Empresa de Transporte' } },

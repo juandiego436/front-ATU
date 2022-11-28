@@ -12,6 +12,8 @@ import { UsersComponent } from './users/users.component';
 import { ReportsComponent } from './reports/reports.component';
 import { BitacoraApsComponent } from './bitacora-aps/bitacora-aps.component';
 import { ChargingCenterComponent } from './charging-center/charging-center.component';
+import { ModalsModule } from './modals/modals.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,13 @@ import { ChargingCenterComponent } from './charging-center/charging-center.compo
   ],
   imports: [
     CommonModule,
-    SharedComponentsModule,
-    RouterModule,
-    ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    SharedComponentsModule,
     ComponentsModule,
-    PrimengModule
+    ModalsModule,
+    SharedModule
   ]
 })
 export class PagesModule { }
