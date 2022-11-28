@@ -53,15 +53,16 @@
           </ng-template>
           <ng-template pTemplate="body" let-customer>
               <tr>
-                  <td>Ruc</td>
-                  <td>07895623</td>
-                  <td>text</td>
-                  <td>namecorreo@gmail.com</td>
-                  <td>963258741</td>
-                  <td>Av. Las Begonias</td>
-                  <td>Ventanilla</td>
-                  <td>Administrador</td>
-                  <td>Av. Las Begonias</td>
+                <tr>
+                  <td>{{customer.fecha}}</td>
+                  <td>{{customer.monto}}</td>
+                  <td>{{customer.placa}}</td>
+                  <td>{{customer.empresa}}</td>
+                  <td>{{customer.ruta}}</td>
+                  <td>{{customer.ubicacion}}</td>
+                  <td>{{customer.origen}}</td>
+                  <td>{{customer.origen}}</td>
+                  <td>{{customer.origen}}</td>
               </tr>
           </ng-template>
           <ng-template pTemplate="paginatorleft">

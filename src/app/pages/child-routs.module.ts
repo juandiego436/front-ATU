@@ -9,7 +9,8 @@ import { UsersComponent } from './users/users.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
-  { path: appRout.user.path, component: UsersComponent, data: { title: 'Usuarios' } },
+  { path: appRout.user.path, component: UsersComponent, data: { title: 'Usuarios Plataforma' } },
+  { path: appRout.pasajero.path, component: UsersComponent, data: { title: 'Pasajero' } },
   { path: appRout.movimientos.path, component: MovimientosComponent, data: { title: 'Movimientos' } },
   { path: appRout.reportes.path, component: ReportsComponent, data: { title: 'Reportes' } },
   { path: appRout.transporte.path, component: HomeComponent, data: { title: 'Empresa de Transporte' } },
