@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-charging-center',
-  templateUrl: './charging-center.component.html',
-  styleUrls: ['./charging-center.component.scss']
+  selector: 'app-empresa',
+  templateUrl: './empresa.component.html',
+  styleUrls: ['./empresa.component.css']
 })
-export class ChargingCenterComponent {
+export class EmpresaComponent implements OnInit {
+
   customers: any[] = DATA;
 
   first = 0;
 
   rows = 10;
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
 
 const DATA = [
