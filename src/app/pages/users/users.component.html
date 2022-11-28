@@ -1,1 +1,38 @@
-<button class="btn btn-primary" (click)="showUseRegister()">Agregar Usuarios</button>
+<div class="card">
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Roles</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Tipo Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>N° de documento</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Nombre de la empresa</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Ubigeo</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-8 col-lg-4 mb-3">
+                <div class="d-flex justify-content-end align-items-center h-100">
+                    <button class="btn btn-info me-2">
+                        <i class="bi bi-search"></i> Buscar
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-arrow-counterclockwise"></i>Limpiar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <button class="btn btn-outline-info" (click)="showUseRegister()">
+            <i class="bi bi-plus"></i>Agregar Usuarios
+        </button>
+        <p-toast></p-toast>
+    </div>
+</div>
+

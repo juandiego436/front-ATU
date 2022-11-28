@@ -1,3 +1,4 @@
+@import "_variables";
 .img-rounded img {
     border-radius: 50%;
 }
@@ -15,9 +16,37 @@ label {
     margin-bottom: 2px;
 }
 
+.p-dialog .p-dialog-header {
+    background: $primary;
+    color: #fff;
+}
 
+.p-dialog-header-close-icon {
+    color: #fff;
+}
+
+// buttons
 .btn-rounded {
     padding: 0.7rem;
     border-radius: 2rem;
     min-width: 10rem;
+}
+
+.btn-bg-white {
+    background:$white;
+}
+
+.btn {
+    color: $btn-text-color !important;
+}
+
+.btn-outline-info {
+    color: $color-text-btn-outline !important;
+}
+.btn-outline-info:hover {
+    color: white !important;
+}
+
+.alert-info {
+    color: $lert-text-color !important;
 }
