@@ -1,7 +1,7 @@
 export const appRout = {
     home: {
-        path: 'home',
-        route: '/home',
+        path: 'Web-ATU',
+        route: '/Web-ATU',
     },
     user: {
         path: 'users',
@@ -10,5 +10,29 @@ export const appRout = {
     movimientos: {
         path: 'movimientos',
         route: '/movimientos',
-    }
+    },
+    reportes: {
+        path: 'reportes',
+        route: '/reportes',
+    },
+    transporte: {
+        path: 'transporte',
+        route: '/transporte',
+    },
+    saldo: {
+        path: 'saldo',
+        route: '/saldo',
+    },
+    bitacora: {
+        path: 'bitacora',
+        route: '/bitacora',
+    },
+    recargas: {
+        path: 'recargas',
+        route: '/recargas',
+    },
+    operador: {
+        path: 'operador-app',
+        route: '/operador-app',
+    },
 };

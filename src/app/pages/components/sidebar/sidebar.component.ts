@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { appRout } from './../../../helpers/constans/index';
-
-appRout
+import { appRout } from "@helpers/constans/index";
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +9,8 @@ appRout
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-
+  AppRoutingModule
+  helpers
   display: boolean = true;
   value: Date;
   menu: any[];
@@ -35,27 +34,33 @@ export class SidebarComponent implements OnInit {
       },
       {
         label: "Reportes",
-        icon: 'bi bi-file-earmark-bar-graph-fill'
+        icon: 'bi bi-file-earmark-bar-graph-fill',
+        rout: appRout.reportes.route
       },
       {
         label: "Empresa de transporte",
-        icon: 'bi bi-bus-front-fill'
+        icon: 'bi bi-bus-front-fill',
+        rout: appRout.transporte.route
       },
       {
         label: "Gestor de saldos",
-        icon: 'bi bi-currency-dollar'
+        icon: 'bi bi-currency-dollar',
+        rout: appRout.saldo.route
       },
       {
         label: "Bitácora de APS",
-        icon: 'bi bi-journal-text'
+        icon: 'bi bi-journal-text',
+        rout: appRout.bitacora.route
       },
       {
         label: "Centros de recargas",
-        icon: 'bi bi-geo-alt'
+        icon: 'bi bi-geo-alt',
+        rout: appRout.recargas.route
       },
       {
         label: "Operador APP",
-        icon: 'bi bi-file-break-fill'
+        icon: 'bi bi-file-break-fill',
+        rout: appRout.operador.route
       }
     ]
   }
