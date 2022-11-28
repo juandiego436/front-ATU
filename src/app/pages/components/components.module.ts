@@ -4,7 +4,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { PrimengModule } from 'src/app/shared/primeng.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 const components = [
   PageNotFoundComponent,
@@ -15,15 +16,18 @@ const components = [
 @NgModule({
   declarations: [
     components,
+    BreadcrumbsComponent,
   ],
   imports: [
     CommonModule,
     PrimengModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     // SharedModule
   ],
   exports: [
-    components
+    components,
+    BreadcrumbsComponent
   ]
 })
 export class ComponentsModule { }

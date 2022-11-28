@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/api';
+import { appRout } from './../../../helpers/constans/index';
+
+appRout
 
 @Component({
   selector: 'app-sidebar',
@@ -10,44 +15,53 @@ export class SidebarComponent implements OnInit {
   display: boolean = true;
   value: Date;
   menu: any[];
-  constructor() { }
+  selectedCity: MenuItem;
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
 
     this.menu = [
       {
-        name: "Usuarios",
-        icon: 'pi pi-user'
+        label: "Usuarios",
+        icon: 'bi bi-people-fill',
+        rout: appRout.user.route
       },
       {
-        name: "Movimientos",
-        icon: 'pi pi-user'
+        label: "Movimientos",
+        icon: 'bi bi-arrow-repeat',
+        rout: appRout.movimientos.route, 
       },
       {
-        name: "Reportes",
-        icon: 'pi pi-user'
+        label: "Reportes",
+        icon: 'bi bi-file-earmark-bar-graph-fill'
       },
       {
-        name: "Empresa de transporte",
-        icon: 'pi pi-user'
+        label: "Empresa de transporte",
+        icon: 'bi bi-bus-front-fill'
       },
       {
-        name: "Gestor de saldos",
-        icon: 'pi pi-user'
+        label: "Gestor de saldos",
+        icon: 'bi bi-currency-dollar'
       },
       {
-        name: "Bitaácora de APS",
-        icon: 'pi pi-user'
+        label: "Bitácora de APS",
+        icon: 'bi bi-journal-text'
       },
       {
-        name: "Centros de recargas",
-        icon: 'pi pi-user'
+        label: "Centros de recargas",
+        icon: 'bi bi-geo-alt'
       },
       {
-        name: "Operador APP",
-        icon: 'pi pi-user'
+        label: "Operador APP",
+        icon: 'bi bi-file-break-fill'
       }
     ]
+  }
+
+  public redirect(item) {
+    this._router.navigate([item.rout]);
   }
 
   public openCloseSideBar() {

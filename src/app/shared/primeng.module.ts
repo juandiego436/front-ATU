@@ -11,6 +11,8 @@ import {ButtonModule} from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ToastModule } from 'primeng/toast';
+import {ListboxModule} from 'primeng/listbox';
+
 
 
 
@@ -25,7 +27,8 @@ const components = [
   ButtonModule,
   DropdownModule,
   DynamicDialogModule,
-  ToastModule
+  ToastModule,
+  ListboxModule
 ];
 
 @NgModule({

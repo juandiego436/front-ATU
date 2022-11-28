@@ -1,18 +1,26 @@
-<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="true">
-    
-
-
+<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="false">
+ <ng-template pTemplate="header">
+    <div class="logo d-flex justify-content-center align-items-center w-100">
+        <img src="assets/images/logo.svg" alt="Logo ATU">
+    </div>
+ </ng-template>
 
     <div class="aside d-flex flex-column">
         <div class="d-flex flex-column align-items-start justify-content-center flex-fill">
-            <ul>
+
+            <!-- <p-menu styleClass="" [model]="menu"></p-menu> -->
+
+            <!-- <p-listbox [options]="menu" [(ngModel)]="selectedCity" optionLabel="label" [style]="{'width':'15rem'}"></p-listbox> -->
+
+
+            <ul p-menu>
                 <li class="active">
                     <i class="pi pi-user"></i>
                     Usuario
                 </li>
-                <li class="" *ngFor="let item of menu">
-                    <i class="pi pi-user"></i>
-                    {{item.name}}
+                <li class="c-pointer" *ngFor="let item of menu" (click)="redirect(item)">
+                    <i [class]="item.icon"></i>
+                    {{item.label}}
                 </li>
             </ul>
         </div>
