@@ -30,6 +30,10 @@ export class LoginComponent {
     this.router.navigate(["/register"])
   }
 
+  public restpPassword() {
+    this.router.navigate(["/reset"])
+  }
+
 }
 
 interface Document {

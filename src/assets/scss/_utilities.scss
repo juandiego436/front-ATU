@@ -1,3 +1,4 @@
+@import "_variables";
 .c-pointer {
     cursor: pointer;
 }
@@ -17,6 +18,10 @@
     background: #d9d9d9 !important;
 }
 
+// .bg-primary {
+//     background: #d9d9d9 !important;
+// }
+
 
 small {
     font-size: 12px;
@@ -25,5 +30,21 @@ small {
 
 // buttons
 .btn-bg-white {
-    background: #fff;
+    background:$white;
 }
+
+.btn {
+    color: $btn-text-color !important;
+}
+
+.alert-info {
+    color: $lert-text-color !important;
+}
+
+// .btn-rounded {
+//     padding: 0.7rem;
+//     border-radius: 2rem;
+//     width: 100%;
+// }
+
+//End buttons

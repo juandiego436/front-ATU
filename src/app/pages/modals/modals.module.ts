@@ -8,7 +8,7 @@ import { PrimengModule } from 'src/app/shared/primeng.module';
     UserRegisterComponent
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     PrimengModule
   ],
   providers: [

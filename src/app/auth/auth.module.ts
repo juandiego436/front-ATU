@@ -11,6 +11,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { ResetComponent } from './reset/reset.component';
 import {PanelModule} from 'primeng/panel';
+import { NewPasswordComponent } from './new-password/new-password.component';
 
 
 
@@ -20,6 +21,7 @@ import {PanelModule} from 'primeng/panel';
     LoginComponent,
     RegisterComponent,
     ResetComponent,
+    NewPasswordComponent,
   ],
   imports: [
     CommonModule,

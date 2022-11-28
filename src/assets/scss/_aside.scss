@@ -1,13 +1,37 @@
+@import "variables";
 .aside {
-    overflow: auto;
-    position: fixed;
-    top: 40px;
-    bottom: 40px;
-    left: 40px;
-    width: 100px;
-    z-index: 98;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #181C32;
-    border-radius: 0.55rem;
+    // position: absolute   
+    // overflow: auto;
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // width: 100px;
+    // z-index: 98;
+    // -webkit-box-shadow: none;
+    // box-shadow: none;
+    // background-color: #181C32;
+    // border-radius: 0.55rem;
+}
+
+.aside ul { 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.aside ul li {
+    list-style: none;
+    padding: 0.9rem;
+    width: 100%;
+    color: $color-text-sidebar;
+    // margin: 0;
+}
+
+.aside ul li.active {
+    background: $bg-active-sidebar;
+    color: $color-text-active-sidebar !important;
+}
+
+.p-sidebar .p-sidebar-content {
+ padding: 0 !important;
 }

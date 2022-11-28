@@ -22,11 +22,11 @@ export class HomeComponent implements OnInit {
   
   public showUseRegister() {
     this.ref = this.dialogService.open(UserRegisterComponent, {
-      header: 'Choose a Product',
-      width: '70%',
+      header: 'Nuevo Usuario',
+      width: '50%',
       contentStyle: { "overflow": "auto" },
       baseZIndex: 10000,
-      maximizable: true
+      maximizable: false
     });
 
     this.ref.onClose.subscribe(( response: UserRegisterComponent) => {

@@ -1,5 +1,24 @@
-<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="false">
-    Content
+<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="true">
+    
+
+
+
+    <div class="aside d-flex flex-column">
+        <div class="d-flex flex-column align-items-start justify-content-center flex-fill">
+            <ul>
+                <li class="active">
+                    <i class="pi pi-user"></i>
+                    Usuario
+                </li>
+                <li class="" *ngFor="let item of menu">
+                    <i class="pi pi-user"></i>
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
 </p-sidebar>
 
 <!-- <p-button type="text"  (click)="display = true" icon="pi pi-plus" label="Show"></p-button>
