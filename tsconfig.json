@@ -25,7 +25,10 @@
     ],
     "paths": {
       "@helpers/*": ["src/app/helpers/*"],
-      "@modals/*": ["src/app/pages/modals/*"]
+      "@modals/*": ["src/app/pages/modals/*"],
+      "@interfaces/*": ["src/app/core/interfaces/*"],
+      "@models/*": ["src/app/core/models/*"],
+      "@services/*": ["src/app/core/services/*"]
     }
   },
   "angularCompilerOptions": {
