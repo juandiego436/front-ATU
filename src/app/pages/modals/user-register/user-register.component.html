@@ -39,9 +39,34 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-12 col-md-6 mb-3">
+    <div class="col-12 mb-3">
         <label>Ubigeo</label>
-        <input type="text" class="p-inputtext-sm" placeholder="Ubigeo" pInputText />
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <label>Departamento</label>
+        <p-dropdown
+            [options]="departamentos"
+            [(ngModel)]="selectedDepartamento"
+            (onChange)="listProvincias(selectedDepartamento)"
+            optionLabel="departamento">
+        </p-dropdown>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <label>Provincia</label>
+        <p-dropdown
+            [options]="provincias"
+            [(ngModel)]="selectedProvincia"
+            (onChange)="listDistritos(selectedProvincia)"
+            optionLabel="provincia">
+        </p-dropdown>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <label>Distrito</label>
+        <p-dropdown
+            [options]="distritos"
+            [(ngModel)]="selectedDistrito"
+            optionLabel="distrito">
+        </p-dropdown>
     </div>
     <div class="col-12 col-md-6 mb-3">
         <label>Periodo de Validez</label>

@@ -13,9 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     FormsModule,
-    InputTextModule,
-    BrowserModule
-    // PrimengModule
+    BrowserModule,
+    PrimengModule
   ],
   providers: [
   ]

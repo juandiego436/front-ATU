@@ -9,7 +9,7 @@ import { TipoDocumento } from '@interfaces/documenType.interface';
 })
 
 export class DocumentTypeService {
-  baseUrl = environment.url;
+  private baseUrl = environment.url;
 
   constructor( private _http: HttpClient ) { }
 
