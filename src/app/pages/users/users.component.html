@@ -28,11 +28,50 @@
                 </div>
             </div>
         </div>
-        
+
         <button class="btn btn-outline-info" (click)="showUseRegister()">
             <i class="bi bi-plus"></i>Agregar Usuarios
         </button>
         <p-toast></p-toast>
     </div>
+    <div class="card">
+      <h5>Lista de Usuarios</h5>
+      <p-table [value]="customers" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+          <ng-template pTemplate="header" class="table-dark">
+              <tr>
+                  <th style="width:25%">Tipo Documento</th>
+                  <th style="width:25%">N° Documento</th>
+                  <th style="width:25%">Nombre Empresa</th>
+                  <th style="width:25%">Correo</th>
+                  <th style="width:25%">Celular</th>
+                  <th style="width:25%">Dirección</th>
+                  <th style="width:25%">Ubigeo</th>
+                  <th style="width:25%">Roles</th>
+                  <th style="width:25%">Opciones</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-customer>
+              <tr>
+                <tr>
+                  <td>{{customer.fecha}}</td>
+                  <td>{{customer.monto}}</td>
+                  <td>{{customer.placa}}</td>
+                  <td>{{customer.empresa}}</td>
+                  <td>{{customer.ruta}}</td>
+                  <td>{{customer.ubicacion}}</td>
+                  <td>{{customer.origen}}</td>
+                  <td>{{customer.origen}}</td>
+                  <td>{{customer.origen}}</td>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="paginatorleft">
+              <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+              <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+          </ng-template>
+      </p-table>
+  </div>
 </div>
 

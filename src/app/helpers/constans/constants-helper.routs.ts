@@ -7,6 +7,10 @@ export const appRout = {
         path: 'users',
         route: '/users',
     },
+    pasajero: {
+      path: 'pasajero',
+      route: '/pasajero',
+    },
     movimientos: {
         path: 'movimientos',
         route: '/movimientos',
@@ -34,5 +38,33 @@ export const appRout = {
     operador: {
         path: 'operador-app',
         route: '/operador-app',
+    },
+    monedero: {
+      path: 'monedero',
+      route: '/monedero',
+    },
+    dudas: {
+      path: 'dudas',
+      route: '/dudas',
+    },
+    gestion: {
+      path: 'gestion-arco',
+      route: '/gestion-arco',
+    },
+    control: {
+      path: 'control-tarifa',
+      route: '/control-tarifa',
+    },
+    qr: {
+      path: 'qr',
+      route: '/qr',
+    },
+    reporte: {
+      path: 'reporte',
+      route: '/reporte',
+    },
+    queja: {
+      path: 'queja-reclamos',
+      route: '/queja-reclamos',
     },
 };
