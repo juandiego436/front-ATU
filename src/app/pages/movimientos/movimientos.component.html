@@ -1,8 +1,35 @@
-
-
-<!-- <h3 class="mb-3">Movimientos</h3> -->
-<div class="card border-0">
+<div class="card border-0 p-2">
     <div class="card-body">
+
+        <div class="row my-3">
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Fecha</label>
+                <p-calendar inputId="basic" [(ngModel)]="date"></p-calendar>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>N° de documento</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Empresa de transporte</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 mb-3">
+                <div class="d-flex justify-content-end align-items-center h-100">
+                    <button class="btn btn-info me-2">
+                        <i class="bi bi-search"></i> Buscar
+                    </button>
+                    <button class="btn btn-primary me-2">
+                        <i class="bi bi-arrow-counterclockwise"></i>Limpiar
+                    </button>
+                    <button class="btn btn-outline-secondary">
+                        <i class="pi pi-download"></i> Exportar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
         <p-table
             [value]="data"
             styleClass="p-datatable-striped"

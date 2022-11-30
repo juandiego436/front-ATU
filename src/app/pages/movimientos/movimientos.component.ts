@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MovimientosComponent implements OnInit {
   data: any[] = DATA;
   first = 0;
+  date: Date;
   constructor() { }
 
   ngOnInit(): void {

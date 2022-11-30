@@ -6,6 +6,7 @@ import { ReportsComponent } from './reports/reports.component';
 
 import { appRout } from '../helpers/constans/index';
 import { UsersComponent } from './users/users.component';
+import { EmpresaComponent } from './empresa/empresa.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
@@ -13,7 +14,7 @@ const childRouts: Routes = [
   { path: appRout.pasajero.path, component: UsersComponent, data: { title: 'Pasajero' } },
   { path: appRout.movimientos.path, component: MovimientosComponent, data: { title: 'Movimientos' } },
   { path: appRout.reportes.path, component: ReportsComponent, data: { title: 'Reportes' } },
-  { path: appRout.transporte.path, component: HomeComponent, data: { title: 'Empresa de Transporte' } },
+  { path: appRout.transporte.path, component: EmpresaComponent, data: { title: 'Empresa de Transporte' } },
   { path: appRout.saldo.path, component: HomeComponent, data: { title: 'Gestor de saldos' } },
   { path: appRout.bitacora.path, component: HomeComponent, data: { title: 'Bitácora de APS' } },
   { path: appRout.recargas.path, component: HomeComponent, data: { title: 'Centros de Recargas' } },

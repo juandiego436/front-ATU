@@ -40,10 +40,10 @@ label {
     color: $btn-text-color !important;
 }
 
-.btn-outline-info {
+.btn-outline-info, .btn-outline-secondary {
     color: $color-text-btn-outline !important;
 }
-.btn-outline-info:hover {
+.btn-outline-info:hover, .btn-outline-secondary:hover {
     color: white !important;
 }
 

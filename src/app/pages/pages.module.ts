@@ -14,6 +14,7 @@ import { BitacoraApsComponent } from './bitacora-aps/bitacora-aps.component';
 import { ChargingCenterComponent } from './charging-center/charging-center.component';
 import { ModalsModule } from './modals/modals.module';
 import { SharedModule } from '../shared/shared.module';
+import { EmpresaComponent } from './empresa/empresa.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedModule } from '../shared/shared.module';
     UsersComponent,
     ReportsComponent,
     BitacoraApsComponent,
-    ChargingCenterComponent
+    ChargingCenterComponent,
+    EmpresaComponent
   ],
   imports: [
     CommonModule,
