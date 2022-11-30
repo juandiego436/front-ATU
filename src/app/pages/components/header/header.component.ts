@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SidebarService } from '@services/sidebar.service';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,13 +10,20 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[];
+  isShowSidebar: boolean;
   public session: Boolean = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private _sidebarService: SidebarService
   ) { }
 
+
+
   ngOnInit(): void {
+    this._sidebarService.sidebar$
+      .subscribe( (response) => this.isShowSidebar = response);
+
     this.items = [
       {
         label: 'Editar Perfil',
@@ -33,7 +41,15 @@ export class HeaderComponent implements OnInit {
       },
     ];
   }
-  public openCloseSideBar() {
-
+  public openClose() {
+    console.log(this.isShowSidebar);
+    if(this.isShowSidebar) {
+      console.log("close");
+      
+      this._sidebarService.close();
+      return;
+    }
+    console.log("open");
+    this._sidebarService.open();
   }
 }

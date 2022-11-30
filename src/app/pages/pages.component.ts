@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidebarService } from '@services/sidebar.service';
 import { MessageService } from 'primeng/api';
 
 @Component({
@@ -8,10 +9,16 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class PagesComponent implements OnInit {
-
-  constructor() { }
+  isShowSidebar: boolean;
+  constructor(
+    private _sidebarService: SidebarService
+  ) { 
+    
+  }
 
   ngOnInit(): void {
+    this._sidebarService.sidebar$
+      .subscribe( (response) => this.isShowSidebar = response);
   }
 
 }

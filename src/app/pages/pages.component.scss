@@ -1,4 +1,10 @@
 .wrapper {
     margin: 0 0 40px 40px;
     margin-left: 20rem;
+    transition: all 0.8s;
+}
+
+.wrapper.close {
+    margin: 0 0 40px 0;
+    transition: all 1s;
 }

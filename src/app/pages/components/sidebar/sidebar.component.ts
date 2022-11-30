@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { appRout } from "@helpers/constans/index";
+import { SidebarService } from '@services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,10 +17,14 @@ export class SidebarComponent implements OnInit {
   menu: any[];
   selectedCity: MenuItem;
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _sidebarService: SidebarService
   ) { }
 
   ngOnInit(): void {
+    this._sidebarService.open();
+    this._sidebarService.sidebar$
+      .subscribe( ( response ) => this.display = response);
 
     this.menu = [
       {

@@ -1,6 +1,10 @@
 <!-- <app-aside></app-aside> -->
-<div class="d-flex flex-column flex-row-fluid wrapper">
-    <app-header></app-header>
+<div class="bg-white" >
+    <div class="wrapper" [class.close]="!isShowSidebar">
+        <app-header></app-header>
+    </div>
+</div>
+<div class="d-flex flex-column flex-row-fluid wrapper" [class.close]="!isShowSidebar">
     <div class="p-4">
         <app-breadcrumbs></app-breadcrumbs>
         <router-outlet></router-outlet>
