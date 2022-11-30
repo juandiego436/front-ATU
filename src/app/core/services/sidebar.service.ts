@@ -1,18 +1,20 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
-  sidebar$ = new EventEmitter();
+  sidebar$ = new BehaviorSubject<boolean>(true);
+
   constructor() { 
   }
 
   public open() {
-    this.sidebar$.emit(true)
+    this.sidebar$.next(true);
   }
 
   public close() { 
-    this.sidebar$.emit(false)
+    this.sidebar$.next(false);
   }
 }

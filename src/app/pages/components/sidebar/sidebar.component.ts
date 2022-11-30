@@ -9,7 +9,7 @@ import { SidebarService } from '@services/sidebar.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit  {
   display: boolean = true;
   value: Date;
   menu: any[];
@@ -20,7 +20,6 @@ export class SidebarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._sidebarService.open();
     this._sidebarService.sidebar$
       .subscribe( ( response ) => this.display = response);
 
@@ -114,9 +113,4 @@ export class SidebarComponent implements OnInit {
   public redirect(item) {
     this._router.navigate([item.rout]);
   }
-
-  public openCloseSideBar() {
-
-  }
-
 }

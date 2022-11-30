@@ -18,8 +18,6 @@ export class HeaderComponent implements OnInit {
     private _sidebarService: SidebarService
   ) { }
 
-
-
   ngOnInit(): void {
     this._sidebarService.sidebar$
       .subscribe( (response) => this.isShowSidebar = response);
@@ -42,14 +40,9 @@ export class HeaderComponent implements OnInit {
     ];
   }
   public openClose() {
-    console.log(this.isShowSidebar);
     if(this.isShowSidebar) {
-      console.log("close");
-      
-      this._sidebarService.close();
-      return;
+      return this._sidebarService.close();
     }
-    console.log("open");
     this._sidebarService.open();
   }
 }
