@@ -9,6 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { SaldosComponent } from './saldos/saldos.component';
 import { BitacoraApsComponent } from './bitacora-aps/bitacora-aps.component';
+import { CentroRecargasComponent } from './centro-recargas/centro-recargas.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
@@ -19,7 +20,7 @@ const childRouts: Routes = [
   { path: appRout.transporte.path, component: EmpresaComponent, data: { title: 'Empresa de Transporte' } },
   { path: appRout.saldo.path, component: SaldosComponent, data: { title: 'Gestionar de saldos' } },
   { path: appRout.bitacora.path, component: BitacoraApsComponent, data: { title: 'Bitácora de APS' } },
-  { path: appRout.recargas.path, component: HomeComponent, data: { title: 'Centros de Recargas' } },
+  { path: appRout.recargas.path, component: CentroRecargasComponent, data: { title: 'Centros de Recargas' } },
   { path: appRout.operador.path, component: HomeComponent, data: { title: 'Operador APP' } },
 ]
 

@@ -16,6 +16,7 @@ import { ModalsModule } from './modals/modals.module';
 import { SharedModule } from '../shared/shared.module';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { SaldosComponent } from './saldos/saldos.component';
+import { CentroRecargasComponent } from './centro-recargas/centro-recargas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SaldosComponent } from './saldos/saldos.component';
     BitacoraApsComponent,
     ChargingCenterComponent,
     EmpresaComponent,
-    SaldosComponent
+    SaldosComponent,
+    CentroRecargasComponent
   ],
   imports: [
     CommonModule,
