@@ -6,16 +6,36 @@
 }
 .aside ul li {
     list-style: none;
-    padding: 0.9rem;
-    width: 100%;
+    padding: 0.7rem 1.5rem;
     color: $color-text-sidebar;
+    font-size: 14px;
+}
+.aside ul li:hover { 
+    background: #004c970f;
+}
+
+.aside ul li i { 
+    color: $info;
 }
 
 .aside ul li.active {
-    background: $bg-active-sidebar;
-    color: $color-text-active-sidebar !important;
+    font-weight: bold;
 }
 
 .p-sidebar .p-sidebar-content {
- padding: 0 !important;
+    padding: 0 !important;
 }
+
+.p-sidebar-left {
+    width: 15rem !important;
+}
+
+.side-bar .p-sidebar-footer  {
+    display: none;
+}
+
+// .p-panelmenu .p-panelmenu-header > a {
+//     padding: 0.5rem;
+//     background: white;
+//     border: 0;
+// }

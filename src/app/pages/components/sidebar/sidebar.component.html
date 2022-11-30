@@ -1,4 +1,4 @@
-<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="false" [transitionOptions]="'0.3s'">
+<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="false" [transitionOptions]="'0.3s'" styleClass="side-bar">
  <ng-template pTemplate="header">
     <div class="logo d-flex justify-content-center align-items-center w-100">
         <img src="assets/images/logo.svg" alt="Logo ATU">
@@ -7,12 +7,6 @@
 
     <div class="aside d-flex flex-column">
         <div class="d-flex flex-column align-items-start justify-content-center flex-fill">
-
-            <!-- <p-menu styleClass="" [model]="menu"></p-menu> -->
-
-            <!-- <p-listbox [options]="menu" [(ngModel)]="selectedCity" optionLabel="label" [style]="{'width':'15rem'}"></p-listbox> -->
-
-
             <ul p-menu>
                 <li class="active">
                     <i class="pi pi-user"></i>

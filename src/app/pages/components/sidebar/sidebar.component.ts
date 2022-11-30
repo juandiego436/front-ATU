@@ -10,8 +10,6 @@ import { SidebarService } from '@services/sidebar.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  AppRoutingModule
-  helpers
   display: boolean = true;
   value: Date;
   menu: any[];
