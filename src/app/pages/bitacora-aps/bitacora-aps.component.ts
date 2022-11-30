@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./bitacora-aps.component.scss']
 })
 export class BitacoraApsComponent {
-
+  date: Date;
 }
