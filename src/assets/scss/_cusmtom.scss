@@ -25,6 +25,12 @@ label {
     color: #fff;
 }
 
+// labels
+
+label {
+    font-size: $label-font-size;
+}
+
 // buttons
 .btn-rounded {
     padding: 0.7rem;
