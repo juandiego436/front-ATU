@@ -7,6 +7,7 @@ input, .p-dropdown {
     width: 100%;
 }
 
+
 .p-button.p-button-secondary {
     background: #7b7b7b;
 }
@@ -55,4 +56,9 @@ label {
 
 .alert-info {
     color: $lert-text-color !important;
+}
+
+.p-component {
+    font-family: 'museo_sans500';
+    font-size: 14px;
 }
