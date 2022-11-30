@@ -17,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { SaldosComponent } from './saldos/saldos.component';
 import { CentroRecargasComponent } from './centro-recargas/centro-recargas.component';
+import { OperadorAppComponent } from './operador-app/operador-app.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CentroRecargasComponent } from './centro-recargas/centro-recargas.compo
     ChargingCenterComponent,
     EmpresaComponent,
     SaldosComponent,
-    CentroRecargasComponent
+    CentroRecargasComponent,
+    OperadorAppComponent
   ],
   imports: [
     CommonModule,
