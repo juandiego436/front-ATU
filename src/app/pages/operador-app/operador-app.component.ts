@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { DownloadDocumentService } from '@helpers/services/download-document.service';
+import { ExportService } from '@helpers/export.service';
 
 @Component({
   selector: 'app-operador-app',
@@ -23,7 +23,7 @@ export class OperadorAppComponent {
   ];
   exportColumns: any[];
   constructor(
-    private _downloadDocumentService: DownloadDocumentService
+    private _exportService: ExportService
   ) { }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class OperadorAppComponent {
         label: 'Pdf',
         icon: 'pi pi-file-pdf',
         command: () => {
-          this._downloadDocumentService
+          this._exportService
             .exportPdf(this.exportColumns, this.data);
         }
       },

@@ -6,7 +6,7 @@ import autoTable from 'jspdf-autotable'
 @Injectable({
   providedIn: 'root'
 })
-export class DownloadDocumentService {
+export class ExportService {
 
   constructor() { }
 
