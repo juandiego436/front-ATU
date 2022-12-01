@@ -27,15 +27,20 @@
                     <button class="btn btn-primary me-2">
                         <i class="bi bi-arrow-counterclockwise"></i>Limpiar
                     </button>
-                    <button class="btn btn-outline-secondary">
-                        <i class="pi pi-download"></i> Exportar
-                    </button>
+                    <p-splitButton
+                        appendTo="body"
+                        label="Exportar"
+                        [model]="itemsDownload"
+                        icon="pi pi-download"
+                        styleClass="p-button-outlined p-button-sm p-button-secondary">
+                    </p-splitButton>
+
                 </div>
             </div>
+          
         </div>
-
-
         <p-table
+            #dt
             [value]="data"
             styleClass="p-datatable-striped"
             [tableStyle]="{'min-width': '50rem'}"

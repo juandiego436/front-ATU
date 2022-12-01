@@ -54,6 +54,10 @@ label {
     color: white !important;
 }
 
+.p-splitbutton.p-button-sm > .p-button {
+    padding: 0.5rem;
+}
+
 .alert-info {
     color: $lert-text-color !important;
 }
