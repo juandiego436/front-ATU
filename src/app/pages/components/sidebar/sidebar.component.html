@@ -1,12 +1,19 @@
-<p-sidebar [(visible)]="display" [modal]="false" [showCloseIcon]="false" [transitionOptions]="'0.3s'" styleClass="side-bar">
+<p-sidebar styleClass="side-bar"
+    [(visible)]="display"
+    [modal]="modal"
+    [showCloseIcon]="false"
+    (onHide)="onHideSideBar()"
+    (onShow)="onShowSideBar()"
+    [transitionOptions]="'0.3s'">
+    
  <ng-template pTemplate="header">
     <div class="logo d-flex justify-content-center align-items-center w-100">
         <img src="assets/images/logo.svg" alt="Logo ATU">
     </div>
  </ng-template>
-
     <div class="aside d-flex flex-column">
         <div class="d-flex flex-column align-items-start justify-content-center flex-fill">
+            <!-- {{modal | async}} -->
             <ul p-menu>
                 <li class="active">
                     <i class="pi pi-user"></i>
@@ -19,9 +26,4 @@
             </ul>
         </div>
     </div>
-
-
 </p-sidebar>
-
-<!-- <p-button type="text"  (click)="display = true" icon="pi pi-plus" label="Show"></p-button>
-<p-calendar [(ngModel)]="value"></p-calendar> -->

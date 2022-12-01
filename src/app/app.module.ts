@@ -10,6 +10,8 @@ import { PrimengModule } from './shared/primeng.module';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 
+import { LayoutModule } from '@angular/cdk/layout';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     PagesModule,
     PrimengModule,
+    LayoutModule,
     AuthModule
   ],
   providers: [],

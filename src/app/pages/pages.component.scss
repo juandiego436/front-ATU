@@ -1,10 +1,18 @@
 .wrapper {
-    margin: 0 0 40px 40px;
-    margin-left: 15rem;
+    // margin: 0 0 40px 40px;
     transition: all 0.3s;
 }
 
 .wrapper.close {
-    margin: 0 0 40px 0;
+    margin: 0 0 0 0;
     transition: all 0.3s;
+}
+
+@media screen and (min-width: 576px) {
+    .wrapper {
+        margin-left: 15rem;
+    }
+    .wrapper.close {
+        // margin: 0 0 40px 0;
+    }   
 }
