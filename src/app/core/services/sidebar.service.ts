@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Breakpoints } from '@helpers/enums/breakpoints.enun';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { MenuChangeEvent } from '@interfaces/menuChangeevent';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { BreakPointService } from './break-point.service';
 
 @Injectable({
@@ -8,22 +8,28 @@ import { BreakPointService } from './break-point.service';
 })
 export class SidebarService {
   sidebar$ = new BehaviorSubject<boolean>(true);
-  sideBarMode$ = new BehaviorSubject<boolean>(true);
-  
-  constructor(breakPointService: BreakPointService) {
+  sidebarMode$ = new BehaviorSubject<boolean>(true);
+
+  private menuSource = new Subject<MenuChangeEvent>();
+  private resetSource = new Subject();
+
+  menuSource$ = this.menuSource.asObservable();
+  resetSource$ = this.resetSource.asObservable();
+
+  constructor(private breakPointService: BreakPointService) {
     breakPointService.size$.
-      subscribe(( resposne ) => this.emitValue(resposne) );
+      subscribe(() => this.emitValue());
   }
 
-  private emitValue(size: string) {
-    if(size !== Breakpoints.XS) {
-      this.sideBarMode$.next(false);
+  private emitValue() {
+    if(this.breakPointService.isDesktop()) {
+      this.sidebarMode$.next(false);
       this.sidebar$.next(true);
-      console.log(size);
-      return;
-    } 
-    this.sidebar$.next(false);
-    this.sideBarMode$.next(true);
+    }
+    else {
+      this.sidebar$.next(false);
+      this.sidebarMode$.next(true);
+    }
   }
 
   public open() {
@@ -32,5 +38,13 @@ export class SidebarService {
 
   public close() {
     this.sidebar$.next(false);
+  }
+
+  onMenuStateChange(event: MenuChangeEvent) {
+    this.menuSource.next(event);
+  }
+
+  reset() {
+    this.resetSource.next(true);
   }
 }

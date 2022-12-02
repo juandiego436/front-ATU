@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { appRout } from "@helpers/constans/index";
 import { SidebarService } from '@services/sidebar.service';
 import { Observable } from 'rxjs';
@@ -16,27 +15,18 @@ export class SidebarComponent implements OnInit {
   modal: any;
   size$: Observable<string>;
   constructor(
-    private _router: Router,
     private _sidebarService: SidebarService
   ) { }
 
   ngOnInit(): void {
-    this.modal = this._sidebarService.sideBarMode$;
+    this.modal = this._sidebarService.sidebarMode$;
 
     this._sidebarService.sidebar$
       .subscribe((response) => this.display = response);
   }
 
-  public redirect(item) {
-    this._router.navigate([item.rout]);
-  }
-
   public onHideSideBar() {
     this._sidebarService.close();
-  }
-
-  public onShowSideBar() {
-    this._sidebarService.open();
   }
 }
 

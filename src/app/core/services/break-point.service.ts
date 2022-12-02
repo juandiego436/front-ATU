@@ -34,8 +34,16 @@ export class BreakPointService {
     return newSize;
   }
 
-  public getBreakPoint() {
+  getBreakPoint() {
     return this._size$;
+  }
+
+  isDesktop() {
+    return window.innerWidth > 991;
+  }
+
+  isMobile() {
+    return !this.isDesktop();
   }
 
 }

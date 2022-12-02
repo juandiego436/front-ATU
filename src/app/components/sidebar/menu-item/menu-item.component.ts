@@ -1,12 +1,9 @@
-import { ChangeDetectorRef, Component, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostBinding, Input } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { LayoutService } from '../services/app.layout.service';
-// import { MenuService } from './app.menu.service';
-// import { LayoutService } from './service/app.layout.service';
-import { MenuService } from './../services/app.menu.service';
+import { SidebarService } from '@services/sidebar.service';
 
 @Component({
   selector: '[menuItem]',
@@ -26,28 +23,21 @@ import { MenuService } from './../services/app.menu.service';
 })
 export class MenuItemComponent {
   @Input() item: any;
-
   @Input() index!: number;
-
   @Input() @HostBinding('class.layout-root-menuitem') root!: boolean;
-
   @Input() parentKey!: string;
 
   active = false;
-
   menuSourceSubscription: Subscription;
-
   menuResetSubscription: Subscription;
-
   key: string = "";
 
   constructor(
-      public layoutService: LayoutService,
       public router: Router,
-      private menuService: MenuService,
+      private _sidebarService: SidebarService,
       private cd: ChangeDetectorRef
   ) {
-      this.menuSourceSubscription = this.menuService.menuSource$.subscribe(value => {
+      this.menuSourceSubscription = this._sidebarService.menuSource$.subscribe(value => {
           Promise.resolve(null).then(() => {
               if (value.routeEvent) {
                   this.active = (value.key === this.key || value.key.startsWith(this.key + '-')) ? true : false;
@@ -60,12 +50,12 @@ export class MenuItemComponent {
           });
       });
 
-      this.menuResetSubscription = this.menuService.resetSource$.subscribe(() => {
+      this.menuResetSubscription = this._sidebarService.resetSource$.subscribe(() => {
           this.active = false;
       });
 
       this.router.events.pipe(filter(event => event instanceof NavigationEnd))
-          .subscribe(params => {
+          .subscribe(() => {
               if (this.item.routerLink) {
                   this.updateActiveStateFromRoute();
               }
@@ -84,7 +74,7 @@ export class MenuItemComponent {
       let activeRoute = this.router.isActive(this.item.routerLink[0], { paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' });
 
       if (activeRoute) {
-          this.menuService.onMenuStateChange({ key: this.key, routeEvent: true });
+          this._sidebarService.onMenuStateChange({ key: this.key, routeEvent: true });
       }
   }
 
@@ -105,7 +95,7 @@ export class MenuItemComponent {
           this.active = !this.active;
       }
 
-      this.menuService.onMenuStateChange({ key: this.key });
+      this._sidebarService.onMenuStateChange({ key: this.key });
   }
 
   get submenuAnimation() {
