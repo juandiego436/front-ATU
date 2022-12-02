@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { SharedComponentsModule } from '../shared/components/components.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages.component';
 import { PrimengModule } from '../shared/primeng.module';
@@ -45,7 +44,6 @@ import { SideBarModule } from '../components/sidebar/sidebar.module';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    SharedComponentsModule,
     ComponentsModule,
     SideBarModule,
     ModalsModule,

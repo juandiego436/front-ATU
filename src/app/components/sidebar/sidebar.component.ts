@@ -58,7 +58,6 @@ const MENU: any[] = [
       {
         label: "Quejas y Reclamos",
         icon: 'bi bi-file-break-fill',
-        rout: appRout.reclamos.route,
         items: [
           {
             label: 'Landing',
