@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { appRout } from "@helpers/constans/index";
 import { SidebarService } from '@services/sidebar.service';
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -18,8 +17,7 @@ export class SidebarComponent implements OnInit {
   size$: Observable<string>;
   constructor(
     private _router: Router,
-    private _sidebarService: SidebarService,
-    public breakpointObserver: BreakpointObserver
+    private _sidebarService: SidebarService
   ) { }
 
   ngOnInit(): void {
