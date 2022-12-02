@@ -59,9 +59,25 @@ export const appRout = {
       path: 'qr',
       route: '/qr',
     },
-    reporte: {
-      path: 'reporte',
-      route: '/reporte',
+    reclamos: {
+      path: 'quejs-reclamos',
+      route: '/quejs-reclamos',
+    },
+    reporteGeneral: {
+      path: 'reporte-general',
+      route: '/reporte-general',
+    },
+    reporteFideicomiso: {
+      path: 'reporte-fideicomiso',
+      route: '/reporte-fideicomiso',
+    },
+    reporteDetallado: {
+      path: 'reporte-detallado',
+      route: '/reporte-detallado',
+    },
+    reportePagos: {
+      path: 'reporte-pagos',
+      route: '/reporte-pagos',
     },
     queja: {
       path: 'queja-reclamos',

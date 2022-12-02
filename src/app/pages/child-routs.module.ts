@@ -11,6 +11,9 @@ import { SaldosComponent } from './saldos/saldos.component';
 import { BitacoraApsComponent } from './bitacora-aps/bitacora-aps.component';
 import { CentroRecargasComponent } from './centro-recargas/centro-recargas.component';
 import { OperadorAppComponent } from './operador-app/operador-app.component';
+import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.component';
+import { GeneradorQrComponent } from './generador-qr/generador-qr.component';
+import { ControlTarifarioComponent } from './control-tarifario/control-tarifario.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
@@ -23,6 +26,14 @@ const childRouts: Routes = [
   { path: appRout.bitacora.path, component: BitacoraApsComponent, data: { title: 'Bitácora de APS' } },
   { path: appRout.recargas.path, component: CentroRecargasComponent, data: { title: 'Centros de Recargas' } },
   { path: appRout.operador.path, component: OperadorAppComponent, data: { title: 'Operador APP' } },
+
+  { path: appRout.control.path, component: ControlTarifarioComponent, data: { title: 'Control tarifario' } },
+  { path: appRout.qr.path, component: GeneradorQrComponent, data: { title: `Generador Qr's` } },
+  { path: appRout.reclamos.path, component: QuejasReclamosComponent, data: { title: 'Quejas y Reclamos' } },
+  { path: appRout.reporteGeneral.path, component: ReportsComponent, data: { title: 'Reporte General' } },
+  { path: appRout.reporteFideicomiso.path , component: ReportsComponent, data: { title: 'Reporte Fideicomiso' }},
+  { path: appRout.reporteDetallado.path, component: ReportsComponent, data: { title: 'Reporte Detallado' }},
+  { path: appRout.reportePagos.path, component: ReportsComponent, data: { title: 'Reporte de Pagos' }},
 ]
 
 @NgModule({

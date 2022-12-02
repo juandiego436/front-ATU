@@ -85,43 +85,38 @@ const MENU = [
   {
     label: "Control de Tarifario",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.control.route
   },
   {
     label: "Generador Qr's",
     icon: 'bi bi-qr-code-scan',
-    rout: appRout.operador.route
-  },
-  {
-    label: "Reportes",
-    icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.qr.route
   },
   {
     label: "Quejas y Reclamos",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.reclamos.route
   },
   //CENTRO RECARGAS
   {
     label: "Reporte General",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.reporteGeneral.route
   },
   {
     label: "Reporte Fideicomiso",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.reporteFideicomiso.route
   },
   //OPERADOR DE RECARGAS
   {
     label: "Reporte Detallado",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.reporteDetallado.path
   },
   {
     label: "Reporte de Pagos",
     icon: 'bi bi-file-break-fill',
-    rout: appRout.operador.route
+    rout: appRout.reportePagos.route
   }
 ];

@@ -18,6 +18,9 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { SaldosComponent } from './saldos/saldos.component';
 import { CentroRecargasComponent } from './centro-recargas/centro-recargas.component';
 import { OperadorAppComponent } from './operador-app/operador-app.component';
+import { ControlTarifarioComponent } from './control-tarifario/control-tarifario.component';
+import { GeneradorQrComponent } from './generador-qr/generador-qr.component';
+import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { OperadorAppComponent } from './operador-app/operador-app.component';
     EmpresaComponent,
     SaldosComponent,
     CentroRecargasComponent,
-    OperadorAppComponent
+    OperadorAppComponent,
+    ControlTarifarioComponent,
+    GeneradorQrComponent,
+    QuejasReclamosComponent
   ],
   imports: [
     CommonModule,
