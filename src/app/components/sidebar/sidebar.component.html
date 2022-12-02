@@ -1,0 +1,30 @@
+<p-sidebar styleClass="side-bar"
+    [(visible)]="display"
+    [modal]="modal"
+    [showCloseIcon]="false"
+    (onHide)="onHideSideBar()"
+    (onShow)="onShowSideBar()"
+    [transitionOptions]="'0.3s'">
+    
+ <ng-template pTemplate="header">
+    <div class="logo d-flex justify-content-center align-items-center w-100">
+        <img src="assets/images/logo.svg" alt="Logo ATU">
+    </div>
+ </ng-template>
+    <div class="aside d-flex flex-column">
+        <div class="d-flex flex-column align-items-start justify-content-center flex-fill">
+            <ul class="layout-menu">
+                <ng-container *ngFor="let item of menu; let i = index;">
+                    <li menuItem *ngIf="!item.separator" [item]="item" [index]="i" [root]="true"></li>
+                    <li *ngIf="item.separator" class="menu-separator"></li>
+                </ng-container>
+                <!-- <li>
+                    <a href="https://www.primefaces.org/primeblocks-ng/#/">
+                        <img src="assets/layout/images/{{layoutService.config.colorScheme === 'light' ? 'banner-primeblocks' : 'banner-primeblocks-dark'}}.png" alt="Prime Blocks" class="w-full mt-3"/>
+                    </a>
+                </li> -->
+            </ul>
+
+        </div>
+    </div>
+</p-sidebar>

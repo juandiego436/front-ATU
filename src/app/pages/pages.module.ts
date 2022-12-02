@@ -3,7 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SharedComponentsModule } from '../shared/components/components.module';
-import { ComponentsModule } from './components/components.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages.component';
 import { PrimengModule } from '../shared/primeng.module';
@@ -21,6 +20,8 @@ import { OperadorAppComponent } from './operador-app/operador-app.component';
 import { ControlTarifarioComponent } from './control-tarifario/control-tarifario.component';
 import { GeneradorQrComponent } from './generador-qr/generador-qr.component';
 import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.component';
+import { ComponentsModule } from '../components/components.module';
+import { SideBarModule } from '../components/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.compo
     RouterModule,
     SharedComponentsModule,
     ComponentsModule,
+    SideBarModule,
     ModalsModule,
     SharedModule
   ]
