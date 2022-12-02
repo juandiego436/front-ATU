@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Breakpoints } from '@helpers/enuns/breakpoints.enun';
+import { Breakpoints } from '@helpers/enums/breakpoints.enun';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { BreakPointService } from './break-point.service';
 

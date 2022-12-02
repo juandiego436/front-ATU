@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { appRout } from "@helpers/constans/index";
 import { SidebarService } from '@services/sidebar.service';
 import { Observable } from 'rxjs';
-import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-sidebar',
@@ -55,17 +54,7 @@ const MENU: any[] = [
       //EMPRESA TRANSPORTE
       { label: "Control de Tarifario", icon: 'bi bi-file-break-fill', rout: appRout.control.route },
       { label: "Generador Qr's", icon: 'bi bi-qr-code-scan', rout: appRout.qr.route },
-      {
-        label: "Quejas y Reclamos",
-        icon: 'bi bi-file-break-fill',
-        items: [
-          {
-            label: 'Landing',
-            icon: 'pi pi-fw pi-globe',
-            routerLink: ['/landing']
-          }
-        ]
-      },
+      { label: "Quejas y Reclamos", icon: 'bi bi-file-break-fill'},
       //CENTRO RECARGAS
       { label: "Reporte General", icon: 'bi bi-file-break-fill', rout: appRout.reporteGeneral.route },
       { label: "Reporte Fideicomiso", icon: 'bi bi-file-break-fill', rout: appRout.reporteFideicomiso.route },
