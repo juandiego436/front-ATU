@@ -1,1 +1,57 @@
-<p>generador-qr works!</p>
+<div class="card border-0 p-2">
+    <div class="card-body">
+
+        <div class="row my-3">
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Placa del vehículo</label>
+                <input type="text" class="p-inputtext-sm" placeholder="ID de la transacción" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Código de ruta</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Nombre del pasajero" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Tipo de unidad</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3">
+                <label>Número de asiento</label>
+                <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-4 mb-3">
+                <div class="d-flex justify-content-end align-items-center h-100">
+                    <button class="btn btn-info me-2">
+                        <i class="bi bi-search"></i> Buscar
+                    </button>
+                    <button class="btn btn-primary me-2">
+                        <i class="bi bi-arrow-counterclockwise"></i>Limpiar
+                    </button>
+                    <button class="btn btn-outline-secondary me-2">
+                        <i class="bi bi-qr-code"></i> Generar QR's
+                    </button>
+                </div>
+            </div>
+          
+        </div>
+        <p-table
+            #dt
+            [value]="data"
+            styleClass="p-datatable-striped"
+            [tableStyle]="{'min-width': '50rem'}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th *ngFor="let col of cols"> {{col.field}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr>
+                    <td *ngFor="let col of cols">
+                        {{item[col.header]}}
+                    </td>  
+                </tr>
+            </ng-template>
+        </p-table>
+        <p-paginator [rows]="10" [totalRecords]="120" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+    </div>
+</div>
