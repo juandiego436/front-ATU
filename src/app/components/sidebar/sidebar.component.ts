@@ -35,7 +35,7 @@ const MENU: any[] = [
     items: [
       { label: "Pasajeros", icon: 'bi bi-people-fill', rout: appRout.user.route },
       { label: "Movimientos", icon: 'bi bi-arrow-repeat', rout: appRout.movimientos.route },
-      { label: "Reportes", icon: 'bi bi-file-earmark-bar-graph-fill', rout: appRout.reportes.route },
+      { label: "Reportes", icon: 'bi bi-file-earmark-bar-graph', rout: appRout.reportes.route },
       { label: "Empresa de transporte", icon: 'bi bi-bus-front-fill', rout: appRout.transporte.route },
       { label: "Gestor de saldos", icon: 'bi bi-currency-dollar', rout: appRout.saldo.route },
       { label: "Bitácora de APS", icon: 'bi bi-journal-text', rout: appRout.bitacora.route },
@@ -46,11 +46,11 @@ const MENU: any[] = [
       { label: "Generador Qr's", icon: 'bi bi-qr-code-scan', rout: appRout.qr.route },
       { label: "Quejas y Reclamos", icon: 'bi bi-chat-left', rout: appRout.reclamos.route},
       //CENTRO RECARGAS
-      { label: "Reporte General", icon: 'bi bi-file-break-fill', rout: appRout.reporteGeneral.route },
-      { label: "Reporte Fideicomiso", icon: 'bi bi-file-break-fill', rout: appRout.reporteFideicomiso.route },
+      { label: "Reporte General", icon: 'bi bi-file-earmark-bar-graph', rout: appRout.reporteGeneral.route },
+      { label: "Reporte Fideicomiso", icon: 'bi bi-arrow-repeat', rout: appRout.reporteFideicomiso.route },
       //OPERADOR DE RECARGAS
-      { label: "Reporte Detallado", icon: 'bi bi-file-break-fill', rout: appRout.reporteDetallado.path },
-      { label: "Reporte de Pagos", icon: 'bi bi-file-break-fill', rout: appRout.reportePagos.route },
+      { label: "Reporte Detallado", icon: 'bi bi-file-earmark-bar-graph', rout: appRout.reporteDetallado.path },
+      { label: "Reporte de Pagos", icon: 'bi bi-file-earmark-bar-graph', rout: appRout.reportePagos.route },
       { label: "Dudas y consultas", icon: 'bi bi-question-circle', rout: appRout.duda.route }
     ]
   }
