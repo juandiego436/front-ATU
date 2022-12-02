@@ -43,10 +43,6 @@ export const appRout = {
       path: 'monedero',
       route: '/monedero',
     },
-    dudas: {
-      path: 'dudas',
-      route: '/dudas',
-    },
     gestion: {
       path: 'gestion-arco',
       route: '/gestion-arco',
@@ -82,5 +78,9 @@ export const appRout = {
     queja: {
       path: 'queja-reclamos',
       route: '/queja-reclamos',
+    },
+    duda: {
+      path: 'duda-consulta',
+      route: '/duda-consulta',
     },
 };

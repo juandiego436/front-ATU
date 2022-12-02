@@ -21,6 +21,7 @@ import { GeneradorQrComponent } from './generador-qr/generador-qr.component';
 import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.component';
 import { ComponentsModule } from '../components/components.module';
 import { SideBarModule } from '../components/sidebar/sidebar.module';
+import { DudasConsultasComponent } from './dudas-consultas/dudas-consultas.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SideBarModule } from '../components/sidebar/sidebar.module';
     OperadorAppComponent,
     ControlTarifarioComponent,
     GeneradorQrComponent,
-    QuejasReclamosComponent
+    QuejasReclamosComponent,
+    DudasConsultasComponent
   ],
   imports: [
     CommonModule,

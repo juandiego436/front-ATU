@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { appRout } from "@helpers/constans/index";
+import { appRout } from "@helpers/constants/index";
 import { SidebarService } from '@services/sidebar.service';
 import { Observable } from 'rxjs';
 
@@ -50,8 +50,8 @@ const MENU: any[] = [
       { label: "Reporte Fideicomiso", icon: 'bi bi-file-break-fill', rout: appRout.reporteFideicomiso.route },
       //OPERADOR DE RECARGAS
       { label: "Reporte Detallado", icon: 'bi bi-file-break-fill', rout: appRout.reporteDetallado.path },
-      { label: "Reporte de Pagos", icon: 'bi bi-file-break-fill', rout: appRout.reportePagos.route }
+      { label: "Reporte de Pagos", icon: 'bi bi-file-break-fill', rout: appRout.reportePagos.route },
+      { label: "Dudas y consultas", icon: 'bi bi-question-circle', rout: appRout.duda.route }
     ]
   }
-
 ];

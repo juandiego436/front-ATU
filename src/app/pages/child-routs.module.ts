@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
 import { ReportsComponent } from './reports/reports.component';
 
-import { appRout } from '../helpers/constans/index';
+import { appRout } from '../helpers/constants/index';
 import { UsersComponent } from './users/users.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { SaldosComponent } from './saldos/saldos.component';
@@ -14,6 +14,7 @@ import { OperadorAppComponent } from './operador-app/operador-app.component';
 import { QuejasReclamosComponent } from './quejas-reclamos/quejas-reclamos.component';
 import { GeneradorQrComponent } from './generador-qr/generador-qr.component';
 import { ControlTarifarioComponent } from './control-tarifario/control-tarifario.component';
+import { DudasConsultasComponent } from './dudas-consultas/dudas-consultas.component';
 
 const childRouts: Routes = [
   { path: 'Web-ATU', component: HomeComponent, data: { title: 'Dashboard' } },
@@ -34,6 +35,7 @@ const childRouts: Routes = [
   { path: appRout.reporteFideicomiso.path , component: ReportsComponent, data: { title: 'Reporte Fideicomiso' }},
   { path: appRout.reporteDetallado.path, component: ReportsComponent, data: { title: 'Reporte Detallado' }},
   { path: appRout.reportePagos.path, component: ReportsComponent, data: { title: 'Reporte de Pagos' }},
+  { path: appRout.duda.path, component: DudasConsultasComponent, data: { title: 'Dudas y consultas' }},
 ]
 
 @NgModule({
