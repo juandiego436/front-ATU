@@ -44,7 +44,7 @@ const MENU: any[] = [
       //EMPRESA TRANSPORTE
       { label: "Control de Tarifario", icon: 'bi bi-file-break-fill', rout: appRout.control.route },
       { label: "Generador Qr's", icon: 'bi bi-qr-code-scan', rout: appRout.qr.route },
-      { label: "Quejas y Reclamos", icon: 'bi bi-file-break-fill'},
+      { label: "Quejas y Reclamos", icon: 'bi bi-chat-left', rout: appRout.reclamos.route},
       //CENTRO RECARGAS
       { label: "Reporte General", icon: 'bi bi-file-break-fill', rout: appRout.reporteGeneral.route },
       { label: "Reporte Fideicomiso", icon: 'bi bi-file-break-fill', rout: appRout.reporteFideicomiso.route },
