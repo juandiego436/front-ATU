@@ -23,6 +23,13 @@
             "polyfills": [
               "zone.js"
             ],
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "raf",
+              "jspdf-autotable",
+              "rgbcolor",
+              "core-js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
