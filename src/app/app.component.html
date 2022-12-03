@@ -1,1 +1,12 @@
 <router-outlet></router-outlet>
+<ngx-http-loader
+    [backdropBackgroundColor]="'#f59e0b00'"
+    [custom]="true"
+    [customLoader]="loaderTemplate">
+    <ng-template #loaderTemplate>
+        <p-progressBar
+            mode="indeterminate"
+            [style]="{'height': '4px'}">
+        </p-progressBar>
+    </ng-template>
+</ngx-http-loader>

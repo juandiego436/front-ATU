@@ -10,6 +10,8 @@ import { PrimengModule } from './shared/primeng.module';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 
+import { NgxHttpLoaderModule } from 'ngx-http-loader'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +24,8 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     PagesModule,
     PrimengModule,
-    AuthModule
+    AuthModule,
+    NgxHttpLoaderModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

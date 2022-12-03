@@ -13,9 +13,6 @@ import { ResetComponent } from './reset/reset.component';
 import {PanelModule} from 'primeng/panel';
 import { NewPasswordComponent } from './new-password/new-password.component';
 
-
-
-
 @NgModule({
   declarations: [
     LoginComponent,

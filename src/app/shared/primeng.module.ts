@@ -68,6 +68,8 @@ import { RippleModule } from 'primeng/ripple';
 import { TreeTableModule } from 'primeng/treetable';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { SkeletonModule } from 'primeng/skeleton';
+
 
 const components = [
   AutoCompleteModule,
@@ -136,7 +138,8 @@ const components = [
   RippleModule,
   TreeTableModule,
   AvatarModule,
-  AvatarGroupModule
+  AvatarGroupModule,
+  SkeletonModule
 ];
 
 @NgModule({

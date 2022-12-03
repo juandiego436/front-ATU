@@ -23,6 +23,7 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.28",
     "ngx-device-detector": "^4.0.1",
+    "ngx-http-loader": "^15.0.0",
     "primeicons": "^6.0.1",
     "primeng": "^15.0.0-rc.1",
     "rxjs": "~7.5.0",

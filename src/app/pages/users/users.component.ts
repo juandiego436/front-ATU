@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { UserRegisterComponent } from '@modals/user-register/user-register.component';
+import { NgxHttpLoaderService } from 'ngx-http-loader';
+import { DocumentTypeService } from '@services/document-type.service';
 
 
 @Component({
@@ -14,15 +16,17 @@ export class UsersComponent {
   value: Date;
   private ref: DynamicDialogRef;
   customers: any[] = DATA;
-
   first = 0;
-
   rows = 10;
 
   constructor(
     public dialogService: DialogService,
     public messageService: MessageService,
-  ) {}
+    private ngxhttploader: NgxHttpLoaderService,
+    private _documentTypeService: DocumentTypeService
+  ) {
+    // this.ngxhttploader.show();
+  }
 
   public showUseRegister() {
     this.ref = this.dialogService.open(UserRegisterComponent, {
@@ -36,6 +40,10 @@ export class UsersComponent {
     this.ref.onClose.subscribe(( response: UserRegisterComponent) => {
       this.messageService.add({severity:'success', summary: 'Usuario registrado'});
   });
+  }
+
+  getDocument() {
+    this._documentTypeService.getListTypeDocument().subscribe();
   }
 
   ngOnDestroy() {

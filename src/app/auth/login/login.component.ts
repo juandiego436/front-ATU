@@ -9,6 +9,9 @@ import { TipoDocumento } from '@interfaces/documenType.interface';
 import { AuthService } from '@services/auth.service';
 import { DocumentTypeService } from '@services/document-type.service';
 
+import { NgxHttpLoaderService } from 'ngx-http-loader';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,9 +27,11 @@ export class LoginComponent implements OnInit {
     private documentTypeService: DocumentTypeService,
     private deviceService: DeviceDetectorService,
     private authService: AuthService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private ngxhttploader: NgxHttpLoaderService
   ) {
     this.listTuypeDocuments();
+    this.ngxhttploader.show();
   }
 
   ngOnInit(): void {

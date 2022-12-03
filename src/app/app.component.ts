@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { DialogService } from 'primeng/dynamicdialog';
-import { MessageService } from 'primeng/api';
+import { NgxLoader } from 'ngx-http-loader';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +8,5 @@ import { MessageService } from 'primeng/api';
 })
 export class AppComponent {
   title = 'FRONT-ATU';
+  public loader = NgxLoader;
 }
