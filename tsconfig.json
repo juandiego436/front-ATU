@@ -28,7 +28,9 @@
       "@modals/*": ["src/app/pages/modals/*"],
       "@interfaces/*": ["src/app/core/interfaces/*"],
       "@models/*": ["src/app/core/models/*"],
-      "@services/*": ["src/app/core/services/*"]
+      "@services/*": ["src/app/core/services/*"],
+      "@interceptors/*": ["src/app/core/interceptors/*"],
+      "@guards/*": ["src/app/guards/*"]
     }
   },
   "angularCompilerOptions": {

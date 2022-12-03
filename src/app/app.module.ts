@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 
 import { NgxHttpLoaderModule } from 'ngx-http-loader'
+import { ErrorInterceptor } from '@interceptors/error.interceptor';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,14 @@ import { NgxHttpLoaderModule } from 'ngx-http-loader'
     AuthModule,
     NgxHttpLoaderModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    MessageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

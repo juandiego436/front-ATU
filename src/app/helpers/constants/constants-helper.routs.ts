@@ -1,3 +1,7 @@
+export const loginRout = {
+  path: 'login',
+  route: '/login',
+}
 export const appRout = {
     home: {
         path: 'Web-ATU',

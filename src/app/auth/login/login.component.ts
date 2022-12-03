@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     private ngxhttploader: NgxHttpLoaderService
   ) {
     this.listTuypeDocuments();
-    this.ngxhttploader.show();
+    // this.ngxhttploader.show();
   }
 
   ngOnInit(): void {
