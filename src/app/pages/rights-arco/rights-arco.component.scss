@@ -1,0 +1,40 @@
+@import "src/assets/scss/breakpoints";
+
+.content-box{
+  background: white;
+}
+
+.question-content {
+  margin-top: 67px;
+  padding: 0 94px;
+
+  .title {
+    font-size: 24px;
+    color: #004C97;
+    margin-bottom: 28px;
+  }
+
+  .answer {
+    font-size: 16px;
+    color: #000000;
+    line-height: 150%;
+    text-align: justify;
+  }
+}
+
+.btn-request {
+  background: #00A3E0;
+  border-radius: 57px;
+  width: 280px;
+  @include min-width-768 {
+    width: 431px;
+  }
+  color: white;
+  margin: 90px 0;
+  font-size: 24px;
+}
+
+.highlighted{
+  color: #004C97;
+  font-weight: 700;
+}

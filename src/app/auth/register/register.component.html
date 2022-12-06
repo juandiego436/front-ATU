@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header py-2">
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="m-0 fs-5">Resgistro</p>
+                            <p class="m-0 fs-5">Registro</p>
                             <button
                                 class="p-button-rounded p-button-secondary p-button-text text-white"
                                 pButton pRipple
@@ -22,7 +22,7 @@
                                 <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label>Numero Documento</label>
+                                <label>Número Documento</label>
                                 <input type="text" class="p-inputtext-sm" placeholder="Numero Documento" pInputText />
                             </div>
                         </div>
@@ -37,6 +37,26 @@
                             </div>
                         </div>
                         <div class="row">
+                          <div class="col-12 col-md-6 mb-3">
+                              <label>Departamento</label>
+                              <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
+                          </div>
+                          <div class="col-12 col-md-6 mb-3">
+                            <label>Provincia</label>
+                            <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label>Distrito</label>
+                            <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label>Dirección</label>
+                          <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
+                      </div>
+                    </div>
+                        <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label>Contraseña</label>
                                 <input type="text" class="p-inputtext-sm" placeholder="Contraseña" pInputText />
@@ -48,10 +68,14 @@
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label>Tipo de Usuario</label>
+                                <label>Perfil</label>
                                 <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
-                            </div>  
-                        </div> 
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                              <label>Tipo de Usuario</label>
+                              <p-dropdown [options]="documents" [(ngModel)]="selectedTypeDocument" optionLabel="tipoDocumento"></p-dropdown>
+                          </div>
+                        </div>
                         <div class="d-flex justify-content-center mb-3 mt-3">
                             <button class="btn btn-info me-2" type="button" (click)="cancel()">Cancelar</button>
                             <button class="btn btn-primary" type="button">Registrarme</button>

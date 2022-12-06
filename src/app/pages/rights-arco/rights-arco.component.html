@@ -1,0 +1,29 @@
+<section>
+  <div class="content-box font">
+    <div class="description-content d-flex flex-column align-items-center my-4">
+      <div class="banner-content">
+        <img src="assets/images/banner-atu.jpg" alt="" class="img-fluid">
+      </div>
+      <div class="question-content">
+        <div *ngFor="let item of data" class="mb-4">
+          <h6 class="title font-inter-bold"><strong>{{item.question}}</strong></h6>
+          <p class="answer font-inter-regular" *ngIf="item.id !== 3" [innerHTML]="item.answer"></p>
+          <p class="answer font-inter-regular" *ngIf="item.id === 3">
+            Envíanos un correo electrónico a <a class="email">protecciondedatos@atu.gob.pe </a>adjuntado una
+            <span class="highlighted">solicitud de
+            derechos ARCO</span> debidamente llenado y firmado.
+            De manera opcional, puedes adjuntar otros documentos que consideres necesarios para
+            ejercer tu derecho.</p>
+          <div *ngIf="item.options">
+            <div *ngFor="let option of item.options">
+              <p class="font-inter-regular"><strong>{{option.id}}. {{option.title}}</strong>: {{option.content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="btn btn-request font-inter-bold" href="assets/SOLICITUD_DE_DERECHOS_ARCO%20_VF.docx" download="assets/SOLICITUD_DE_DERECHOS_ARCO%20_VF.docx">DESCARGA TU SOLICITUD AQUÍ</a>
+      </div>
+    </div>
+  </div>
+</section>

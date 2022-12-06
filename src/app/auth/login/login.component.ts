@@ -59,6 +59,7 @@ export class LoginComponent implements OnInit {
       dispositivo: deviceType
     }
     this.authService.login(credentials).subscribe();
+    this.router.navigate(["/Web-ATU"])
   }
 
   public register() {

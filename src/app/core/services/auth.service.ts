@@ -14,14 +14,16 @@ export class AuthService {
 
   login = (credenciales: Credential): Observable<any> => {
     return this._http.post(`${this.baseUrl}/auth/login`, credenciales)
-      .pipe(tap(this.saveToken.bind(this))); 
+      .pipe(tap(this.saveToken.bind(this)));
   }
 
   saveToken = (value: any): void => {
+    console.log(value);
     localStorage.setItem('token', value.token);
+    localStorage.setItem('cuenta',value.cuenta)
   }
 
   isAutenticated = (): boolean =>  {
-    return false;
+    return localStorage.getItem("token") != null ? true : false;
   }
 }
